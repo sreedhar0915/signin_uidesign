@@ -44,7 +44,6 @@ class _SigninState extends State<Signin> {
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
                         controller: emailcontroller,
-
                         decoration: InputDecoration(
                           labelText: "Email",
                           hintText: ("Your email address"),
@@ -57,19 +56,9 @@ class _SigninState extends State<Signin> {
                               borderSide:
                                   BorderSide(color: Colors.blue, width: 3)),
                         ),
-                        // validator: (value) {
-                        //   if (value == null || value.isEmpty) {
-                        //     return 'Please enter an email address';
-                        //   }
-
-                        //   if (!emailcontroller.text.contains("@")) {
-                        //     return "please enter valid email";
-                        //   }
-                        //   return null;
-                        // },
                         validator: (value) {
                           if (value != email) {
-                            return "Wrong email address";
+                            return "wrong email address";
                           } else if (value!.isEmpty) {
                             return "enter email address";
                           } else {
@@ -82,7 +71,6 @@ class _SigninState extends State<Signin> {
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
                         controller: Passwordcontroller,
-
                         obscureText: true,
                         decoration: InputDecoration(
                             labelText: "Passsword",
@@ -100,15 +88,6 @@ class _SigninState extends State<Signin> {
                                 borderRadius: BorderRadius.circular(10),
                                 borderSide:
                                     BorderSide(color: Colors.red, width: 3))),
-                        // validator: (value) {
-                        //   if (value == null || value.isEmpty) {
-                        //     return "Enter your password";
-                        //   }
-                        //   if (value.length < 5) {
-                        //     return "Password must be atleast 5 characters";
-                        //   }
-                        //   return null;
-                        // },
                         validator: (value) {
                           if (value != password) {
                             return "Wrong password";
