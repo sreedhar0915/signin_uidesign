@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signin_uidesign/main.dart';
-import 'package:signin_uidesign/view/login/login.dart';
+import 'package:signin_uidesign/view/logout/logout.dart';
 import 'package:signin_uidesign/view/signup/signup.dart';
 
 class Signin extends StatefulWidget {
@@ -139,7 +139,7 @@ class _SigninState extends State<Signin> {
                         password = Passwordcontroller.text;
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Loginpage()),
+                          MaterialPageRoute(builder: (context) => Logout()),
                         );
                       }
                     },
